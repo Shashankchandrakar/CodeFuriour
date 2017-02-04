@@ -5,12 +5,31 @@ include_once('header.php');
 
             <!--Home Sections-->
 
-<div class="container">
+   	<div class="container custom-color">
+   		
+   		<div class="container">
+testjdfhjkhdskjfhd
+fsdf
+ds
+f
 
-</div>
-  <div class="top-image">
-  	<img src="">	
-  </div>
+sd
+f
+ds
+f
+ds
+f
+ds
+f
+
+ds
+fds
+
+fs
+dfs
+d
+	</div>
+  
 <?php
 include_once('footer.php');
 ?>

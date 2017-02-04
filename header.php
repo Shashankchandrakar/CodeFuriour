@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>  
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -79,7 +82,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="#brand">
+                        <a class="navbar-brand" href="index.php">
 
                             <!--div style="background-color:white;font-size:25px;" class="logo logo-display m-top-10" >Code Furiour</div-->
                             <div class="logo logo-scrolled" style="font-size: 25px;padding-top: 0.5em;">Code Furiour</div>
@@ -88,20 +91,34 @@
                     </div>
                     <!-- End Header Navigation -->
 
+<?php if( isset( $_SESSION['user_id'] ) ): ?>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div id="navbar-menu">
-                        <ul class="nav navbar navbar-nav  navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li><a href="#hello">Hello</a></li>                    
-                            <li><a href="#about">About</a></li>                    
-                            <li><a href="#service">Services</a></li>                    
-                            <li><a href="#portfolio">Portfolio</a></li>                    
-                            <li><a href="#pricing">Pricing</a></li>                    
-                            <li><a href="#blog"></a></li>  
+                        <ul class="nav navbar navbar-nav navbar-right custom-ul-nav" data-in="fadeInDown" data-out="fadeOutUp" id="custom-nav">
+                            <li><a href="track1.php">CuratedTracks</a></li>                    
+                            <li><a href="#about">Courses</a></li>                    
+                            <li><a href="#service">Fedback</a></li>                    
+                            <li><a href="#portfolio">User Profile</a></li>                    
+                            <li><a href="logout.php">Logout</a></li>                    
+                              
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div> 
  
-
+<?php else: ?>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div id="navbar-menu">
+                        <ul class="nav navbar navbar-nav navbar-right custom-ul-nav" data-in="fadeInDown" data-out="fadeOutUp" id="custom-nav">
+                            <li><a href="#hello">Hello</a></li>                    
+                            <li><a href="#about">About</a></li>                    
+                            <li><a href="#service">Services</a></li>                    
+                            <li><a href="#portfolio">Portfolio</a></li>                    
+                            <li><a href="login.php">Login</a></li>                    
+                              
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+<?php endif; ?>
 <!-- Start Side Menu -->
                 <div class="side">
                     <a href="#" class="close-side"><i class="fa fa-times"></i></a>
@@ -129,3 +146,5 @@
                 <!-- End Side Menu -->
 
             </nav>
+
+

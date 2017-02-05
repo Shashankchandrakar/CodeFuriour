@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Editor</title>
+  <style type="text/css" media="screen">
+    body {
+        overflow: hidden;
+    }
+    #editor {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .edit {
+      width: 500px;
+      height: 700px;
+      position: absolute;
+      bottom: 80%;
+    }
+  </style>
+</head>
+<body>
+
+<pre id="editor"></pre>
+<div class="edit">
+<script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+</div>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+    editor.resize();
+    document.getElementById('editor').style.fontSize='19px';
+    editor.commands.addCommand({
+    name: 'myCommand',
+    bindKey: {win: 'Ctrl-L',  mac: 'Command-L'},
+    exec: function(editor) {
+        var code = editor.getValue();
+        alert(code);
+    },
+    readOnly: false // false if this command should not apply in readOnly mode
+});
+
+</script>
+</body>
+</html>

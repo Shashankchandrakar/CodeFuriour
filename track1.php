@@ -10,17 +10,16 @@ include_once('header.php');
   } else {
     echo "Nope";
   }
-  $studid = $_SESSION['studid'];
+  @$studid = @$_SESSION['studid'];
   $query1 = "select course_count from student_track where stud_id='$studid'";
   $result1 = mysqli_query($conn,$query1);
   $data1 = mysqli_fetch_array($result1);
   if(isset($data1[0])){
     $course_count = $data1[0];
   } else {
-    echo "Nope";
   }
-  $pbar = $course_count/$total_count*100;
-  echo $pbar;
+  @$pbar = @$course_count/@$total_count*100;
+  //echo $pbar;
 ?>
  
 
@@ -62,7 +61,7 @@ include_once('header.php');
                    <p class="card-text course-text">
                      his course, built with input from GitHub, will introduce the basics of using version control by focusing on a particular version control system called Git and a collaboration platform called GitHub.
                    </p>
-                   <a href="gitcourse1.php" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
+                   <a href="course2.php?track_id_passed=<?php echo $_SESSION['track_id_passed']?>" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
                  </div>
                </div>
             </div>
@@ -94,7 +93,7 @@ include_once('header.php');
                    <p class="card-text course-text">
                      his course, built with input from GitHub, will introduce the basics of using version control by focusing on a particular version control system called Git and a collaboration platform called GitHub.
                    </p>
-                   <a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
+                   <a href="course4.php?track_id_passed=<?php echo $_SESSION['track_id_passed']?>" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
                  </div>
                </div>
             </div><br>

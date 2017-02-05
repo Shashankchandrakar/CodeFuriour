@@ -1,5 +1,9 @@
 <?php
 include_once('header.php');
+include_once('header.php');
+$studid = $_SESSION['studid'];
+$course_id = 2;
+$track_id_passed = $_GET['track_id_passed'];
 ?>
 <head>
 	<style type="text/css">
@@ -41,6 +45,41 @@ Our SQL tutorial will teach you how to use SQL to access and manipulate data in:
 			<div class="start">
 				<h2>Problem Assignment</h2>
 			</div>
+			<div id="mark">
+			   <form action="mark-course.php" method="get">
+				<?php 
+				require('connect.php');
+					$query = "SELECT * from student_course where stud_id='$studid' and course_id='$course_id'";
+					$result = mysqli_query($conn,$query);
+					$data = mysqli_fetch_array($result);
+					if(!isset($data[0]))
+					{
+						//not registered
+
+
+					
+				?>
+				not registered.
+				<?php
+					} 
+					else
+					{	//user is registered
+						$query1 = "SELECT * from student_course where stud_id='$studid' and course_id='$course_id' and course_status=0";
+						$result1 = mysqli_query($conn,$query1);
+						$data1 = mysqli_fetch_array($result1);
+						if(!isset($data1[0]))
+						{
+					?>
+						You have already completed this course.
+					<?php } 
+					else {
+						?>
+						<input type="text" name="course_id" value="<?php echo $course_id;?>" id="course_id" hidden>
+			   		<input type="text" name="track_id" value=" <?php echo $track_id; ?>" id="track_id" hidden>
+					<input type="submit" name="mark" value="Mark as Complete!" id='mark-complete'>
+					<?php } } ?>
+			   </form>	
+			</div><br>
 	</div>
 </div>
 </body>

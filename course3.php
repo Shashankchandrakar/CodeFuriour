@@ -57,14 +57,16 @@ PHP is a widely-used, free, and efficient alternative to competitors such as Mic
 					$data = mysqli_fetch_array($result);
 					if(!isset($data[0]))
 					{
+						//not registered
+
 
 					
 				?>
-					register-----------
+				not registered.
 				<?php
 					} 
 					else
-					{
+					{	//user is registered
 						$query1 = "SELECT * from student_course where stud_id='$studid' and course_id='$course_id' and course_status=0";
 						$result1 = mysqli_query($conn,$query1);
 						$data1 = mysqli_fetch_array($result1);
@@ -75,8 +77,8 @@ PHP is a widely-used, free, and efficient alternative to competitors such as Mic
 					<?php } 
 					else {
 						?>
-						<input type="text" name="course_id" value="3" id="course_id" hidden>
-			   		<input type="text" name="track_id" value="<?php echo $track_id_passed; ?>" id="track_id" hidden>
+						<input type="text" name="course_id" value="<?php echo $track_id; ?>" id="course_id" hidden>
+			   		<input type="text" name="track_id" value="<?php echo $track_id; ?>" id="track_id" hidden>
 					<input type="submit" name="mark" value="Mark as Complete!" id='mark-complete'>
 					<?php } } ?>
 			   </form>	

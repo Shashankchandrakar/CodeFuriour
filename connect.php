@@ -2,30 +2,17 @@
 <?php
 	$servername = "localhost";
 	$username = "root";
-	$password = "vaibhav123";
-	$dbname = "hackthon_db";
-	echo "hell";
+	$password = "";
+
 	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	echo "hell";
+	$conn = mysqli_connect($servername, $username, $password);
+
 	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
 	}
+	echo "Connected successfully";
 
-	// prepare and bind
-	$stmt = $conn->prepare("INSERT into student_info (stud_id,stud_name,stud_email,stud_password VALUES(?,?,?,?)");
-	$stmt->bind_param("sss", $fname, $email, $pass);
-
-	// set parameters and execute
-	$uname = "John";
-	$fname = "Doe";
-	$email = "john@example.com";
-	$pass = "123";
-	$stmt->execute();
-
-	echo "New records created successfully";
-
-	$stmt->close();
-	$conn->close();
-?> 
+	mysqli_select_db( $conn, "hackthon_db");
+	
+?>	

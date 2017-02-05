@@ -41,16 +41,16 @@ include_once('header.php');
 </head>
 <div class="container" style="border:solid">
   <div class="login"><br>
-  <form action='login_connect.php' method="POST">
+  <form action='login_connect.php' method="get">
   	   <div class="label">Sign In</div><hr width="555px">
   	   <div class="input-group input-group-lg">
   		<span class="input-group-addon" id="sizing-addon1">Email</span>
-  		<input class="form-control" placeholder="Email" aria-describedby="sizing-addon1" type="text">
+  		<input class="form-control" placeholder="Email" aria-describedby="sizing-addon1" type="text" name="email">
 	   </div>
 	   <br>
   	   <div class="input-group input-group-lg">
   		<span class="input-group-addon" id="sizing-addon1">Password</span>
-  		<input  class="form-control" placeholder="Password" aria-describedby="sizing-addon1" type="password">
+  		<input  class="form-control" placeholder="Password" aria-describedby="sizing-addon1" type="password" name="pass">
 	   </div>
   	   <br>
   	   <input type="submit" class="btn-outline-primary" id="login-btn" value="Login">&nbsp;&nbsp;

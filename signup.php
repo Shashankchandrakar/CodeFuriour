@@ -48,7 +48,7 @@ include_once('header.php');
 		}
 	</style>
 </head><br>
-<form action="register.php" method="post">
+<form action="register.php" method="POST">
 
 <div class="container" style="border:solid">
   <div class="register"><br>
@@ -101,7 +101,6 @@ include_once('header.php');
   		
   	
   </script>
- </div> <br>
 <?php
 include_once('footer.php');
 ?>

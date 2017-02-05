@@ -21,7 +21,7 @@ include_once('header.php');
                    <p class="card-text course-text">
                      his course, built with input from GitHub, will introduce the basics of using version control by focusing on a particular version control system called Git and a collaboration platform called GitHub.
                    </p>
-                   <a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
+                   <a href="gitcourse1.php" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
                  </div>
                  
                </div>
@@ -41,7 +41,7 @@ include_once('header.php');
                    <p class="card-text course-text">
                      his course, built with input from GitHub, will introduce the basics of using version control by focusing on a particular version control system called Git and a collaboration platform called GitHub.
                    </p>
-                   <a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
+                   <a href="gitcourse1.php" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
                  </div>
                </div>
             </div>
@@ -57,7 +57,7 @@ include_once('header.php');
                    <p class="card-text course-text">
                      his course, built with input from GitHub, will introduce the basics of using version control by focusing on a particular version control system called Git and a collaboration platform called GitHub.
                    </p>
-                   <a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
+                   <a href="gitcourse1.php" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
                  </div>
                </div>
             </div>
@@ -73,7 +73,7 @@ include_once('header.php');
                    <p class="card-text course-text">
                      his course, built with input from GitHub, will introduce the basics of using version control by focusing on a particular version control system called Git and a collaboration platform called GitHub.
                    </p>
-                   <a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
+                   <a href="gitcourse1.php" class="card-link course-link"><button type="button" class="btn btn-outline-primary">Start Learning!</button></a>
                  </div>
                </div>
             </div><br>

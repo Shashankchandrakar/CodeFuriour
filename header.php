@@ -91,7 +91,7 @@
                     </div>
                     <!-- End Header Navigation -->
 
-<?php if( isset( $_SESSION['user_id'] ) ): ?>
+<?php if( isset( $_SESSION['email'] ) ): ?>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div id="navbar-menu">
                         <ul class="nav navbar navbar-nav navbar-right custom-ul-nav" data-in="fadeInDown" data-out="fadeOutUp" id="custom-nav">

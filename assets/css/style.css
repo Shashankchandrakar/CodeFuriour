@@ -28,7 +28,7 @@ Author URI: http://xpeedstudio.com
    ========================================================================== */
 html,
 body {
-    background-color: #fff;
+    background-color: #e5e6e8;
     font-size: 14px;
     color: #797979;
     width: 100%;
@@ -1736,4 +1736,68 @@ Footer Section style
     margin-left: -6px;
     text-decoration: none;
 
+}
+/* course div classes */
+.course-div {
+    background: #fff;
+    width: 720px;
+    text-align: left;
+    border-radius: 4px 4px 0px 0px;
+    height: 190px;
+}
+
+.course-title {
+    width: 100%;
+    background: #689bed;
+    height: 50px;
+    border-radius: 4px 4px 0px 0px;
+    padding-top:  8px;
+    padding-left: 15px;
+}
+
+.course-text
+{
+     padding-left: 15px;
+}
+
+.course-subtitle
+{
+    padding-left: 15px;
+}
+.course-link
+{
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: 4px 4px 0px 0px;
+}
+.course-link button:hover{
+    background-color: #689bed;
+    border-radius: 4px 4px 0px 0px;
+}
+.course-footer {
+    width: 720px;
+    height: 3px;
+    background: #000;
+}
+
+/* vertical line =========================== */
+
+.vertical-line
+{
+    padding-bottom: 20px;
+    align-self: center;
+    height: 100px;
+    width: 3px;
+    background: #7a7a7a;
+}
+
+.track-title 
+{
+    font-family: Ubuntu;
+    color: #99e8a6;
+    padding-top: 10px;
+}
+
+.custom-ul-nav {
+    padding-right: 20px;
 }

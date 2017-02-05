@@ -95,10 +95,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div id="navbar-menu">
                         <ul class="nav navbar navbar-nav navbar-right custom-ul-nav" data-in="fadeInDown" data-out="fadeOutUp" id="custom-nav">
-                            <li><a href="track1.php">CuratedTracks</a></li>                    
+                            <li><a href="curatedtracks.php">CuratedTracks</a></li>                    
                             <li><a href="#about">Courses</a></li>                    
-                            <li><a href="#service">Fedback</a></li>                    
-                            <li><a href="#portfolio">User Profile</a></li>                    
+                            <li><a href="#service">Feedback</a></li>                    
+                            <li><a href="#portfolio"><?php echo $_SESSION['name']?></a></li>                    
                             <li><a href="logout.php">Logout</a></li>                    
                               
                         </ul>
@@ -108,11 +108,8 @@
 <?php else: ?>
     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div id="navbar-menu">
-                        <ul class="nav navbar navbar-nav navbar-right custom-ul-nav" data-in="fadeInDown" data-out="fadeOutUp" id="custom-nav">
-                            <li><a href="#hello">Hello</a></li>                    
-                            <li><a href="#about">About</a></li>                    
-                            <li><a href="#service">Services</a></li>                    
-                            <li><a href="#portfolio">Portfolio</a></li>                    
+                        <ul class="nav navbar navbar-nav navbar-right custom-ul-nav" data-in="fadeInDown" data-out="fadeOutUp" id="custom-nav">                   
+                            <li><a href="signup.php">Sign Up</a></li>                    
                             <li><a href="login.php">Login</a></li>                    
                               
                         </ul>

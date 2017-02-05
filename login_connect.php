@@ -10,8 +10,9 @@ session_start();
 	$data = mysqli_fetch_array($result);
 	if(isset($data[0])){
 		echo "Logged IN";
-		$_SESSION['email'] = $data[0];
+		$_SESSION['email'] = $data[2];
 		$_SESSION['name'] = $data[1];
+		$_SESSION['studid']= $data[0];
 		header("Location:index.php");
 	} else {
 		echo "Nope";

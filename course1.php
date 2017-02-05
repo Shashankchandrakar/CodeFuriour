@@ -1,5 +1,7 @@
 <?php
 include_once('header.php');
+$track_id_passed = $_GET['track_id_passed'];
+echo $track_id_passed;
 ?>
 <head>
 	<style type="text/css">
@@ -46,6 +48,14 @@ include_once('header.php');
 			<div class="start">
 				<h2>Problem Assignment</h2>
 			</div>
+
+			<div id="mark">
+			   <form action="mark-course.php" method="get">
+			   	<input type="text" name="course_id" value="1" id="course_id" hidden>
+			   	<input type="text" name="track_id" value="<?php echo $track_id_passed; ?>" id="track_id" hidden>
+				<input type="submit" name="mark" value="Mark as Complete" id='mark-complete'>
+			   </form>	
+			</div><br>
 	</div>
 </div>
 </body>

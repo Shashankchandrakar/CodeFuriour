@@ -15,7 +15,6 @@ include_once('header.php');
 			padding-top: 130px;
 			font-size: 25px;
 		}
-
 		.learn-subject:hover, .learn-track-system:hover {
 			background: orange;
 			position: relative;
@@ -23,20 +22,17 @@ include_once('header.php');
 			transition : font-size 30px;
 			transition-duration: 0.3s;
 		}
-
 		.connect {
 			width: 20px;
 			height: 100px;
 			background: gray;
 		}
-
 		.animtext {
 			display: none;
 		}
 		.animtext:hover {
 			display: block;
 		}
-
 	</style>
 </head>
    		<div class="container" align="center"><br>
